@@ -13,6 +13,30 @@ Player::Player(Side side)
 
 void Player::update()
 {
+	switch (state_)
+	{
+	case Player::MOVE:
+		move();
+		break;
+	case Player::ATTACK:
+		attack();
+		break;
+	case Player::JUMP:
+		jump();
+		break;
+	default:
+		break;
+	}
+	if (Input::KeyUp.pressed && state_ != Player::JUMP){
+		bezierCurve.setPoint(rect_.x, rect_.y, rect_.x - 200, rect_.y, rect_.x - (200 / 2), rect_.y - 250, 0.025);
+		state_ = JUMP;
+	}
+
+	
+}
+
+void Player::changeState()
+{
 
 }
 
@@ -39,7 +63,14 @@ void Player::move()
 
 void Player::jump()
 {
-
+	if (bezierCurve.isEnd() == false){
+		bezierCurve.start();
+		rect_.x = bezierCurve.get_x();
+		rect_.y = bezierCurve.get_y();
+	}
+	else{
+		state_ = MOVE;
+	}
 }
 
 void Player::attack()

@@ -1,6 +1,7 @@
 #pragma once
 
 #include<Siv3D.hpp>
+#include"BezierCurve.h"
 
 class PlayerUpdater;
 
@@ -25,6 +26,8 @@ private:
 	Rect rect_;
 private:
 	Rect &rect();
+	BezierCurve bezierCurve;
+	void changeState();
 public:
 	void move();
 	void jump();
