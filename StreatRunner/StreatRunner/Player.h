@@ -26,6 +26,9 @@ private:
 private:
 	Rect &rect();
 public:
+	void move();
+	void jump();
+	void attack();
 	Rect rectClone()const;
 	void update();
 	Player(Side side);
