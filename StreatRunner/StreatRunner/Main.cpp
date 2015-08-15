@@ -10,8 +10,6 @@ void Main()
 	Player player1(Player::LEFT);
 	Player player2(Player::RIGHT);
 
-
-
 	while (System::Update())
 	{
 		player1.update();
