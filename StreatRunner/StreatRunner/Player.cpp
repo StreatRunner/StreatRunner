@@ -26,10 +26,10 @@ void Player::update()
 {
 	if (playerState_->hasFinished()) {
 		if (side_ == RIGHT && Input::KeyUp.pressed) {
-			playerState_ = std::make_shared<PlayerJump>(this->rect().x, this->rect().y, 50);
+			playerState_ = std::make_shared<PlayerJump>(this->rect().x, this->rect().y, 100);
 		}
 		else if (side_ == LEFT && Input::KeyW.pressed) {
-			playerState_ = std::make_shared<PlayerJump>(this->rect().x, this->rect().y, -50);
+			playerState_ = std::make_shared<PlayerJump>(this->rect().x, this->rect().y, -100);
 		}
 		else if ((side_ == RIGHT && Input::KeyDown.pressed) || (side_ == LEFT && Input::KeyS.pressed)){
 			playerState_ = std::make_shared<PlayerAttack>();

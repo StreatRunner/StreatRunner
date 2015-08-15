@@ -3,7 +3,7 @@
 
 PlayerJump::PlayerJump(int x, int y, int distance)
 {
-	bezier.setPoint(x, y, x - distance, y, x - (distance / 2), y - 150, 0.02);
+	bezier.setPoint(x, y, x - distance, y, x - (distance / 2), y - 300, 0.02);
 }
 
 
