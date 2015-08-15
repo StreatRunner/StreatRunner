@@ -22,15 +22,17 @@ public:
 private:
 	Side side_;
 	State state_;
+	std::shared_ptr <Rect> attack_;
 	std::shared_ptr<PlayerState> playerState_;
 	Rect rect_;
 private:
 	void changeState();
 public:
+	std::shared_ptr<Rect>& getAttack();
 	void move();
 	void jump();
 	void attack();
-
+	void addAttack();
 	Rect &rect(); 
 	Side side();
 	void update();

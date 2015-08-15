@@ -14,6 +14,12 @@ void Main()
 	{
 		player1.update();
 		player2.update();
+		if (player1.getAttack() != nullptr){
+			player1.getAttack()->draw(Palette::Yellow);
+		}
+		if (player2.getAttack() != nullptr){
+			player2.getAttack()->draw(Palette::Yellow);
+		}
 		player1.rect().draw(Palette::Blue);
 		player2.rect().draw(Palette::Red);
 		ground.draw(Palette::Black);
