@@ -3,6 +3,7 @@
 #include"Player.h"
 #include"Ground.h"
 #include"CollisionPlayerPlayer.h"
+#include "CollisionPlayerAttack.h"
 
 void draw(Player player1, Player player2, Ground ground);
 
@@ -20,6 +21,7 @@ void Main()
 		player2.update();
 		
 		CollisionPlayerPlayer().detect(player1, player2);
+		CollisionPlayerAttack().detect(player1, player2);
 
 		draw(player1, player2, ground);
 	}
