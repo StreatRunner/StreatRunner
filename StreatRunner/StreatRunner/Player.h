@@ -1,10 +1,9 @@
 #pragma once
 
 #include<Siv3D.hpp>
-#include"BezierCurve.h"
 
 class PlayerUpdater;
-
+class PlayerState;
 class Player
 {
 	friend class PlayerUpdater;
@@ -23,16 +22,17 @@ public:
 private:
 	Side side_;
 	State state_;
+	std::shared_ptr<PlayerState> playerState_;
 	Rect rect_;
 private:
-	Rect &rect();
-	BezierCurve bezierCurve;
 	void changeState();
 public:
 	void move();
 	void jump();
 	void attack();
-	Rect rectClone()const;
+
+	Rect &rect(); 
+	Side side();
 	void update();
 	Player(Side side);
 	~Player();

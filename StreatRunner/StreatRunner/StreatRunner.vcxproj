@@ -15,6 +15,8 @@
     <ClCompile Include="Ground.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerJump.cpp" />
+    <ClCompile Include="PlayerMove.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Engine\splash.png" />
@@ -168,6 +170,9 @@
     <ClInclude Include="BezierCurve.h" />
     <ClInclude Include="Ground.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerJump.h" />
+    <ClInclude Include="PlayerMove.h" />
+    <ClInclude Include="PlayerState.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{01EBD207-CEBE-4DA3-A9A9-7D6E6169945A}</ProjectGuid>

@@ -1,5 +1,6 @@
 #include "Player.h"
-
+#include"PlayerMove.h"
+#include"PlayerJump.h"
 
 Player::Player(Side side)
 {
@@ -7,33 +8,30 @@ Player::Player(Side side)
 		Rect(0, 570, 25, 50) : Rect(1255, 570, 25, 50);
 
 	state_ = MOVE;
+	playerState_ = std::make_shared<PlayerMove>();
 }
 
 
 
 void Player::update()
 {
-	switch (state_)
-	{
-	case Player::MOVE:
-		move();
-		break;
-	case Player::ATTACK:
-		attack();
-		break;
-	case Player::JUMP:
-		jump();
-		break;
-	default:
-		break;
+	if (playerState_->hasFinished()) {
+		if (side_ == RIGHT && Input::KeyUp.pressed) {
+			playerState_ = std::make_shared<PlayerJump>(this->rect().x, this->rect().y, 50);
+		}
+		else if (side_ == LEFT && Input::KeyW.pressed) {
+			playerState_ = std::make_shared<PlayerJump>(this->rect().x, this->rect().y, -50);
+		}
+		else {
+			playerState_ = std::make_shared<PlayerMove>();
+		}
 	}
-	if (Input::KeyUp.pressed && state_ != Player::JUMP){
-		bezierCurve.setPoint(rect_.x, rect_.y, rect_.x - 200, rect_.y, rect_.x - (200 / 2), rect_.y - 250, 0.025);
-		state_ = JUMP;
-	}
+
+	playerState_->update(*this);
 
 	
 }
+
 
 void Player::changeState()
 {
@@ -63,14 +61,14 @@ void Player::move()
 
 void Player::jump()
 {
-	if (bezierCurve.isEnd() == false){
+	/*if (bezierCurve.isEnd() == false){
 		bezierCurve.start();
 		rect_.x = bezierCurve.get_x();
 		rect_.y = bezierCurve.get_y();
 	}
 	else{
 		state_ = MOVE;
-	}
+	}*/
 }
 
 void Player::attack()
@@ -83,9 +81,9 @@ Rect &Player::rect()
 	return rect_;
 }
 
-Rect Player::rectClone()const
+Player::Side Player::side()
 {
-	return rect_;
+	return side_;
 }
 
 Player::~Player()
