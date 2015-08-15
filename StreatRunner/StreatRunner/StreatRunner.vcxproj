@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BezierCurve.cpp" />
+    <ClCompile Include="CollisionPlayerPlayer.cpp" />
     <ClCompile Include="FlameCounter.cpp" />
     <ClCompile Include="Ground.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -170,6 +171,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BezierCurve.h" />
+    <ClInclude Include="CollisionPlayerPlayer.h" />
     <ClInclude Include="FlameCounter.h" />
     <ClInclude Include="Ground.h" />
     <ClInclude Include="Player.h" />

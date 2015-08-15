@@ -8,11 +8,18 @@ Player::Player(Side side)
 	rect_ =  (side_ = side) == LEFT ?
 		Rect(0, 570, 25, 50) : Rect(1255, 570, 25, 50);
 
-	state_ = MOVE;
 	playerState_ = std::make_shared<PlayerMove>();
 	attack_ = nullptr;
 }
 
+void Player::initialize()
+{
+	rect_ = side_ == LEFT ?
+		Rect(0, 570, 25, 50) : Rect(1255, 570, 25, 50);
+
+	playerState_ = std::make_shared<PlayerMove>();
+	attack_ = nullptr;
+}
 
 
 void Player::update()
@@ -40,49 +47,6 @@ void Player::update()
 std::shared_ptr<Rect>& Player::getAttack()
 {
 	return attack_;
-}
-
-void Player::changeState()
-{
-
-}
-
-void Player::move()
-{
-	if (side_ == LEFT) {
-		if (Input::KeyD.pressed) {
-			rect_.moveBy(1, 0);
-		}
-		else if (Input::KeyA.pressed) {
-			rect_.moveBy(-1, 0);
-
-		}
-	}
-	else {
-		if (Input::KeyRight.pressed) {
-			rect_.moveBy(1, 0);
-		}
-		else if (Input::KeyLeft.pressed) {
-			rect_.moveBy(-1, 0);
-		}
-	}
-}
-
-void Player::jump()
-{
-	/*if (bezierCurve.isEnd() == false){
-		bezierCurve.start();
-		rect_.x = bezierCurve.get_x();
-		rect_.y = bezierCurve.get_y();
-	}
-	else{
-		state_ = MOVE;
-	}*/
-}
-
-void Player::attack()
-{
-
 }
 
 Rect &Player::rect()
