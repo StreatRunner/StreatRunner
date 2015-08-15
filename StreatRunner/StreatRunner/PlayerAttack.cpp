@@ -1,7 +1,7 @@
 #include "PlayerAttack.h"
 #include "Player.h"
 
-PlayerAttack::PlayerAttack() : flameCounter(150)
+PlayerAttack::PlayerAttack() : flameCounter(40)
 {
 
 }
@@ -25,10 +25,10 @@ void PlayerAttack::update(Player &player)
 	}
 	else{
 		if (player.side() == Player::LEFT){
-			player.getAttack()->moveBy(2, -2);
+			player.getAttack()->moveBy(3, -3);
 		}
 		else{
-			player.getAttack()->moveBy(-2, -2);
+			player.getAttack()->moveBy(-3, -3);
 		}
 	}
 
