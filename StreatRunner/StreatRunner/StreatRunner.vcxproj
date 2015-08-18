@@ -186,7 +186,7 @@
     <ProjectGuid>{01EBD207-CEBE-4DA3-A9A9-7D6E6169945A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>StreatRunner</RootNamespace>
-    <ProjectName>StreatRunner</ProjectName>
+    <ProjectName>StreetRunner</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
