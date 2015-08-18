@@ -30,7 +30,6 @@ void Main()
 		}
 		draw(player1, player2, goal1, goal2);
 	}
-
 }
 
 void draw(Player player1, Player player2, Rect goal1, Rect goal2)
