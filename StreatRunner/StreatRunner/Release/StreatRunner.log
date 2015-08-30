@@ -1,0 +1,14 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (Release\) contains files shared from another project (StreatRunner.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  BezierCurve.cpp
+  CollisionPlayerAttack.cpp
+  CollisionPlayerPlayer.cpp
+  FlameCounter.cpp
+  Ground.cpp
+  Main.cpp
+  Player.cpp
+  PlayerAttack.cpp
+  PlayerJump.cpp
+  PlayerMove.cpp
+  コード生成しています。
+  コード生成が終了しました。
+  StreatRunner.vcxproj -> C:\Users\伊藤 友彦\Documents\Programming\StreatRunner\StreatRunner\Release\StreetRunner.exe
