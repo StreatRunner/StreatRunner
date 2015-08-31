@@ -52,11 +52,13 @@ struct Game : MyApp::Scene
 struct Start : MyApp::Scene
 {
 	Font font;
+	Texture texture;
 
 	// クラスの初期化時に一度だけ呼ばれる（省略可）
 	void init() override
 	{
 		font = Font(56);
+		texture = Texture(L"HowToPlay.png");
 	}
 
 	// 毎フレーム updateAndDraw() で呼ばれる
@@ -71,7 +73,8 @@ struct Start : MyApp::Scene
 	// 毎フレーム update() の次に呼ばれる
 	void draw() const override
 	{
-		font(L"Click to start \"Street Runner\"").drawCenter(Window::Center(), Palette::Black);
+		font(L"Click to start \"Street Runner\"").drawCenter({Window::Center().x, 120 }, Palette::Black);
+		texture.scale(0.4).drawAt(Window::Center().movedBy(0, 100));
 	}
 };
 
