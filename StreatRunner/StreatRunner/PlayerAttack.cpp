@@ -1,7 +1,7 @@
 #include "PlayerAttack.h"
 #include "Player.h"
 
-PlayerAttack::PlayerAttack() : flameCounter(50)
+PlayerAttack::PlayerAttack() : flameCounter(42)
 {
 
 }

@@ -8,7 +8,11 @@ StreatRunner/StreatRunner.v12.suo
 StreatRunner/StreatRunner/StreatRunner.vcxproj
 StreatRunner/StreatRunner/StreatRunner.vcxproj.filters
 StreatRunner/StreatRunner/StreatRunner.user
-StreatRunner\StreatRunner\StreatRunner_log.html
+*Runner_log.html
+StreatRunner/StreatRunner/Release/
+StreatRunner/StreatRunner/Debug/
+StreatRunner/Release/
+StreatRunner/Debug/
 
 # User-specific files
 *.suo
@@ -198,3 +202,5 @@ GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
 StreatRunner/StreatRunner/StreatRunner_log.html
+Game/StreetRunner_log.html
+StreatRunner/StreatRunner/StreetRunner_log.html
