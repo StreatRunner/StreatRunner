@@ -21,6 +21,7 @@
     <ClCompile Include="PlayerAttack.cpp" />
     <ClCompile Include="PlayerJump.cpp" />
     <ClCompile Include="PlayerMove.cpp" />
+    <ClCompile Include="Controller.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Engine\splash.png" />
@@ -175,8 +176,11 @@
     <ClInclude Include="BezierCurve.h" />
     <ClInclude Include="CollisionPlayerAttack.h" />
     <ClInclude Include="CollisionPlayerPlayer.h" />
+    <ClInclude Include="Controller.h" />
     <ClInclude Include="FlameCounter.h" />
+    <ClInclude Include="Gamepad.h" />
     <ClInclude Include="Ground.h" />
+    <ClInclude Include="Keyboard.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PlayerAttack.h" />
     <ClInclude Include="PlayerJump.h" />

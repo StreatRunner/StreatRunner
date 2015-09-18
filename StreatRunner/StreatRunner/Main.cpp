@@ -5,6 +5,7 @@
 #include"Ground.h"
 #include"CollisionPlayerPlayer.h"
 #include "CollisionPlayerAttack.h"
+#include"Controller.h"
 
 void draw(Player player1, Player player2, Rect goal1, Rect goal2);
 Color detectGoal(Player player1, Player player2, Rect goal1, Rect goal2);
@@ -64,7 +65,7 @@ struct Start : MyApp::Scene
 	// 毎フレーム updateAndDraw() で呼ばれる
 	void update() override
 	{
-		if (Input::MouseL.clicked) {
+		if (Controller::input_->anyKeyPressed()) {
 			// 次のシーケンスと、フェードイン・アウトの時間（ミリ秒）
 			changeScene(L"Game", 200);
 		}
@@ -80,7 +81,9 @@ struct Start : MyApp::Scene
 
 void Main()
 {
-	Window::Resize(1280, 720);
+	Window::SetFullscreen(true, { 1280, 720 });
+	//Window::Resize(1280, 720);
+	Cursor::SetStyle(CursorStyle::None);
 	Graphics::SetBackground(Palette::White);
 	
 	MyApp manager(SceneManagerOption::None);

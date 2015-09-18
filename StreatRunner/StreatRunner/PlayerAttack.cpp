@@ -20,7 +20,7 @@ bool PlayerAttack::hasFinished()
 void PlayerAttack::update(Player &player)
 {
 	if (flameCounter.getCount() == 0){
-		player.getAttack() = std::make_shared<Rect>(60, 60);
+		player.getAttack() = std::make_shared<Rect>(64, 64);
 		player.getAttack()->setCenter(player.rect()._get_center());
 	}
 	else{
