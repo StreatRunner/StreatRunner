@@ -3,6 +3,7 @@
 #include<Siv3D.hpp>
 
 class PlayerState;
+class Controller;
 class Player
 {
 public:
@@ -12,10 +13,11 @@ public:
 		LEFT,
 	};
 private:
-	Side side_;
+	Side const side_;
 	std::shared_ptr <Rect> attack_;
 	std::shared_ptr<PlayerState> playerState_;
 	Rect rect_;
+	Player &operator=(Player const &) = delete;
 public:
 	std::shared_ptr<Rect>& getAttack();
 	void addAttack();
