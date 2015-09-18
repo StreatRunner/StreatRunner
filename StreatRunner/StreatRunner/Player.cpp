@@ -19,7 +19,7 @@ Player::Player(Side side)
 void Player::initialize()
 {
 	rect_ = side_ == LEFT ?
-		Rect(0, 570, 25, 50) : Rect(1255, 570, 25, 50);
+		Rect(0, 570, 25, 60) : Rect(1255, 570, 25, 60);
 	
 	playerState_ = std::make_shared<PlayerMove>();
 	attack_ = nullptr;

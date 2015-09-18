@@ -5,9 +5,7 @@
 *.opensdf
 *.sdf
 *.v12.suo
-*.vcxproj
-*.vcxproj.filters
-*.vcxproj.user
+*.vcxproj*
 *Runner_log.html
 */Release/*
 */Debug/*
