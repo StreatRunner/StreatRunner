@@ -6,3 +6,4 @@
 #include"Gamepad.h"
 
 std::shared_ptr<Controller> Controller::input_ = std::make_shared<::Gamepad>();
+//std::shared_ptr<Controller> Controller::input_ = std::make_shared<Keyboard>();
